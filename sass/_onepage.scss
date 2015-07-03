@@ -1,0 +1,80 @@
+//TODO - convert nav-height to rem-height mixin
+
+$nav-height: 5rem;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-color: gray;
+  position: fixed;
+  top: 0;
+  height: $nav-height;
+  width: 100%;
+  .row {
+    height: 100%;
+  }
+}
+
+h1 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#main-nav {
+  float: right;
+  height: $nav-height;
+  li {
+    float: left;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 0 32px;
+      padding: 2rem;
+      position: relative;
+      top: 50%;
+      @include translateY(-50%);
+    }
+    &:last-child {
+      a {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: $nav-height;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding: 0 1.25rem;
+  @include box-sizing(border-box);
+}
+
+section .row {
+  min-height: 400px;
+  padding: 48px 20px;
+  padding: 3rem 1.25rem; 
+}
+
+#start {
+  background-color: #ccc;
+}
+
+#contact {
+  background-color: #eee;
+}
