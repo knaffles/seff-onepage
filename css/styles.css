@@ -64,24 +64,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 5, ../sass/_onepage.scss */
+/* line 10, ../sass/_onepage.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 9, ../sass/_onepage.scss */
+/* line 14, ../sass/_onepage.scss */
 html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 13, ../sass/_onepage.scss */
+/* line 18, ../sass/_onepage.scss */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cabin', sans-serif;
 }
 
-/* line 17, ../sass/_onepage.scss */
+/* line 22, ../sass/_onepage.scss */
+img {
+  display: inline-block;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 30, ../sass/_onepage.scss */
 header {
   background-color: black;
   position: fixed;
@@ -90,11 +99,11 @@ header {
   width: 100%;
   z-index: 10;
 }
-/* line 24, ../sass/_onepage.scss */
+/* line 37, ../sass/_onepage.scss */
 header .row {
   height: 100%;
 }
-/* line 27, ../sass/_onepage.scss */
+/* line 40, ../sass/_onepage.scss */
 header h1 {
   font-size: 1.5rem;
   float: left;
@@ -103,15 +112,16 @@ header h1 {
   transform: translateY(-50%);
 }
 
-/* line 36, ../sass/_onepage.scss */
+/* line 49, ../sass/_onepage.scss */
 .hero-container {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 42, ../sass/_onepage.scss */
+/* line 55, ../sass/_onepage.scss */
 .hero {
+  font-family: 'Gentium Basic', sans-serif;
   font-size: 3.25rem;
   font-weight: bold;
   letter-spacing: 5px;
@@ -120,7 +130,7 @@ header h1 {
   margin-bottom: 1rem;
 }
 
-/* line 51, ../sass/_onepage.scss */
+/* line 65, ../sass/_onepage.scss */
 .subhero {
   text-transform: uppercase;
   font-size: 2rem;
@@ -128,13 +138,20 @@ header h1 {
   text-align: center;
 }
 
-/* line 58, ../sass/_onepage.scss */
+/* line 72, ../sass/_onepage.scss */
 #main-nav {
   float: right;
   height: 5rem;
   text-transform: uppercase;
 }
-/* line 62, ../sass/_onepage.scss */
+@media (max-width: 479px) {
+  /* line 72, ../sass/_onepage.scss */
+  #main-nav {
+    float: none;
+    text-align: center;
+  }
+}
+/* line 80, ../sass/_onepage.scss */
 #main-nav li {
   float: left;
   height: 100%;
@@ -142,7 +159,14 @@ header h1 {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 68, ../sass/_onepage.scss */
+@media (max-width: 479px) {
+  /* line 80, ../sass/_onepage.scss */
+  #main-nav li {
+    display: inline-block;
+    float: none;
+  }
+}
+/* line 90, ../sass/_onepage.scss */
 #main-nav li a {
   color: white;
   text-decoration: none;
@@ -155,17 +179,25 @@ header h1 {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 78, ../sass/_onepage.scss */
-#main-nav li:last-child a {
-  padding-right: 0;
+@media (max-width: 479px) {
+  /* line 90, ../sass/_onepage.scss */
+  #main-nav li a {
+    padding: 1rem;
+  }
+}
+@media (min-width: 480px) {
+  /* line 104, ../sass/_onepage.scss */
+  #main-nav li:last-child a {
+    padding-right: 0;
+  }
 }
 
-/* line 85, ../sass/_onepage.scss */
+/* line 112, ../sass/_onepage.scss */
 main {
   margin-top: 5rem;
 }
 
-/* line 89, ../sass/_onepage.scss */
+/* line 116, ../sass/_onepage.scss */
 .row {
   max-width: 1000px;
   margin: 0 auto;
@@ -175,17 +207,17 @@ main {
   box-sizing: border-box;
 }
 
-/* line 96, ../sass/_onepage.scss */
+/* line 123, ../sass/_onepage.scss */
 section {
   clear: both;
 }
 
-/* line 100, ../sass/_onepage.scss */
+/* line 127, ../sass/_onepage.scss */
 section .row {
   min-height: 500px;
   padding: 5rem 1.25rem;
 }
-/* line 103, ../sass/_onepage.scss */
+/* line 130, ../sass/_onepage.scss */
 section .row hr {
   clear: both;
   border: none;
@@ -194,63 +226,81 @@ section .row hr {
   margin: 0 0 5rem;
 }
 
-/* line 112, ../sass/_onepage.scss */
+/* line 139, ../sass/_onepage.scss */
 #start {
   background-color: #222;
   color: white;
 }
-/* line 115, ../sass/_onepage.scss */
+/* line 142, ../sass/_onepage.scss */
 #start .row {
   height: 31.25rem;
 }
 
-/* line 120, ../sass/_onepage.scss */
+/* line 147, ../sass/_onepage.scss */
 #work {
   color: #566364;
 }
-/* line 122, ../sass/_onepage.scss */
-#work img {
-  width: 55%;
-  padding: 0 1rem 0 0;
-  float: left;
-  transform: perspective(700px) rotateY(25deg) translateX(15px);
+/* line 150, ../sass/_onepage.scss */
+#work img.center {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto 1rem auto;
 }
-/* line 127, ../sass/_onepage.scss */
-#work img.left {
-  float: right;
-  padding: 0 0 0 1rem;
-  transform: perspective(700px) rotateY(-25deg) translateX(-15px);
+@media (max-width: 479px) {
+  /* line 149, ../sass/_onepage.scss */
+  #work img {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 480px) {
+  /* line 159, ../sass/_onepage.scss */
+  #work img.right {
+    width: 55%;
+    padding: 0 1rem 0 0;
+    float: left;
+    transform: perspective(700px) rotateY(25deg) translateX(15px);
+  }
+  /* line 165, ../sass/_onepage.scss */
+  #work img.left {
+    width: 55%;
+    float: right;
+    padding: 0 0 0 1rem;
+    transform: perspective(700px) rotateY(-25deg) translateX(-15px);
+  }
 }
 
-/* line 135, ../sass/_onepage.scss */
-.work-blurb {
-  width: 45%;
-  padding: 0 0 0 1rem;
-  float: left;
+@media (min-width: 480px) {
+  /* line 177, ../sass/_onepage.scss */
+  .work-blurb.right {
+    width: 45%;
+    padding: 0 0 0 1rem;
+    float: left;
+  }
+  /* line 182, ../sass/_onepage.scss */
+  .work-blurb.left {
+    width: 45%;
+    float: right;
+    padding: 0 1rem 0 0;
+  }
 }
-/* line 139, ../sass/_onepage.scss */
-.work-blurb.left {
-  float: right;
-  padding: 0 1rem 0 0;
-}
-/* line 143, ../sass/_onepage.scss */
+/* line 188, ../sass/_onepage.scss */
 .work-blurb h2 {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Gentium Basic', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-/* line 149, ../sass/_onepage.scss */
+/* line 194, ../sass/_onepage.scss */
 .work-blurb p {
   line-height: 1.4;
 }
 
-/* line 154, ../sass/_onepage.scss */
+/* line 199, ../sass/_onepage.scss */
 #contact {
   background-color: #222;
   color: whitesmoke;
 }
-/* line 157, ../sass/_onepage.scss */
+/* line 202, ../sass/_onepage.scss */
 #contact h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -258,7 +308,7 @@ section .row hr {
   text-transform: uppercase;
   text-align: center;
 }
-/* line 164, ../sass/_onepage.scss */
+/* line 209, ../sass/_onepage.scss */
 #contact input[type="text"],
 #contact textarea {
   display: block;
@@ -267,17 +317,17 @@ section .row hr {
   margin: 1rem auto;
   padding: .5rem;
 }
-/* line 172, ../sass/_onepage.scss */
+/* line 217, ../sass/_onepage.scss */
 #contact textarea {
   height: 6rem;
 }
-/* line 175, ../sass/_onepage.scss */
+/* line 220, ../sass/_onepage.scss */
 #contact input[type="submit"] {
   background-color: cornflowerblue;
   color: white;
   font-size: 1rem;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cabin', sans-serif;
   text-transform: uppercase;
   display: block;
   border: none;
