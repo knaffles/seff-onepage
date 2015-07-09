@@ -87,7 +87,7 @@ main {
 }
 
 .row {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.25rem;
   @include box-sizing(border-box);
@@ -120,7 +120,7 @@ section .row {
 #work {
   color: #566364;
   img {
-    width: 45%;
+    width: 55%;
     padding: 0 1rem 0 0;
     float: left;
     transform: perspective(700px) rotateY(25deg) translateX(15px);
@@ -133,7 +133,7 @@ section .row {
 }
 
 .work-blurb {
-  width: 55%;
+  width: 45%;
   padding: 0 0 0 1rem;
   float: left;
   &.left {
