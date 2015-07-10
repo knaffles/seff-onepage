@@ -410,3 +410,7 @@ section .row hr {
   padding: .5rem 1.5rem;
   margin: 0 auto;
 }
+/* line 302, ../sass/_onepage.scss */
+#contact iframe {
+  height: 650px;
+}
