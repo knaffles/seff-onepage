@@ -64,29 +64,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 15, ../sass/_onepage.scss */
+/* line 17, ../sass/_onepage.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 19, ../sass/_onepage.scss */
+/* line 21, ../sass/_onepage.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 23, ../sass/_onepage.scss */
+/* line 25, ../sass/_onepage.scss */
 html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 27, ../sass/_onepage.scss */
+/* line 29, ../sass/_onepage.scss */
 body {
   font-family: "Cabin", sans-serif;
 }
 
-/* line 31, ../sass/_onepage.scss */
+/* line 33, ../sass/_onepage.scss */
+a {
+  color: #415f93;
+  text-decoration: none;
+}
+/* line 36, ../sass/_onepage.scss */
+a:hover, a:focus {
+  color: #22314c;
+}
+
+/* line 41, ../sass/_onepage.scss */
 img {
   display: inline-block;
   vertical-align: middle;
@@ -95,7 +105,7 @@ img {
   height: auto;
 }
 
-/* line 39, ../sass/_onepage.scss */
+/* line 49, ../sass/_onepage.scss */
 header {
   background-color: black;
   opacity: 0.9;
@@ -106,17 +116,17 @@ header {
   width: 100%;
   z-index: 10;
 }
-/* line 48, ../sass/_onepage.scss */
+/* line 58, ../sass/_onepage.scss */
 header .row {
   height: 100%;
   position: relative;
 }
-/* line 53, ../sass/_onepage.scss */
+/* line 63, ../sass/_onepage.scss */
 header.show-title .header-title {
   transform: translateY(-50%);
 }
 
-/* line 59, ../sass/_onepage.scss */
+/* line 69, ../sass/_onepage.scss */
 .header-title {
   color: #cccccc;
   font-family: "Gentium Basic", serif;
@@ -128,26 +138,26 @@ header.show-title .header-title {
   transition: transform 200ms ease-in;
 }
 @media (max-width: 360px) {
-  /* line 59, ../sass/_onepage.scss */
+  /* line 69, ../sass/_onepage.scss */
   .header-title {
     font-size: 2rem;
   }
 }
 @media (max-width: 479px) {
-  /* line 72, ../sass/_onepage.scss */
+  /* line 82, ../sass/_onepage.scss */
   .header-title span {
     display: none;
   }
 }
 
-/* line 79, ../sass/_onepage.scss */
+/* line 89, ../sass/_onepage.scss */
 .hero-container {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 85, ../sass/_onepage.scss */
+/* line 95, ../sass/_onepage.scss */
 .hero {
   font-family: "Gentium Basic", serif;
   font-size: 3.25rem;
@@ -155,21 +165,21 @@ header.show-title .header-title {
   margin-bottom: 1rem;
 }
 
-/* line 92, ../sass/_onepage.scss */
-.subhero {
+/* line 102, ../sass/_onepage.scss */
+.subhero, .section-title {
   text-transform: uppercase;
   font-size: 2rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-align: center;
 }
 
-/* line 99, ../sass/_onepage.scss */
+/* line 109, ../sass/_onepage.scss */
 #main-nav {
   float: right;
   height: 5rem;
   text-transform: uppercase;
 }
-/* line 107, ../sass/_onepage.scss */
+/* line 113, ../sass/_onepage.scss */
 #main-nav li {
   float: left;
   height: 100%;
@@ -177,7 +187,7 @@ header.show-title .header-title {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 117, ../sass/_onepage.scss */
+/* line 119, ../sass/_onepage.scss */
 #main-nav li a {
   color: #cccccc;
   text-decoration: none;
@@ -191,31 +201,31 @@ header.show-title .header-title {
   transform: translateY(-50%);
 }
 @media (max-width: 360px) {
-  /* line 117, ../sass/_onepage.scss */
+  /* line 119, ../sass/_onepage.scss */
   #main-nav li a {
     padding: .5rem;
     font-size: .9rem;
   }
 }
 @media (max-width: 479px) {
-  /* line 117, ../sass/_onepage.scss */
+  /* line 119, ../sass/_onepage.scss */
   #main-nav li a {
     padding: .75rem;
   }
 }
 @media (min-width: 480px) {
-  /* line 135, ../sass/_onepage.scss */
+  /* line 137, ../sass/_onepage.scss */
   #main-nav li:last-child a {
     padding-right: 0;
   }
 }
 
-/* line 143, ../sass/_onepage.scss */
+/* line 145, ../sass/_onepage.scss */
 main {
   margin-top: 5rem;
 }
 
-/* line 147, ../sass/_onepage.scss */
+/* line 149, ../sass/_onepage.scss */
 .row {
   max-width: 1000px;
   margin: 0 auto;
@@ -225,17 +235,17 @@ main {
   box-sizing: border-box;
 }
 
-/* line 154, ../sass/_onepage.scss */
+/* line 156, ../sass/_onepage.scss */
 section {
   clear: both;
 }
 
-/* line 158, ../sass/_onepage.scss */
+/* line 160, ../sass/_onepage.scss */
 section .row {
   min-height: 500px;
   padding: 5rem 1.25rem;
 }
-/* line 161, ../sass/_onepage.scss */
+/* line 163, ../sass/_onepage.scss */
 section .row hr {
   clear: both;
   border: none;
@@ -244,7 +254,13 @@ section .row hr {
   margin: 0 0 5rem;
 }
 
-/* line 170, ../sass/_onepage.scss */
+/* line 172, ../sass/_onepage.scss */
+.section-title {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+/* line 178, ../sass/_onepage.scss */
 #start {
   background: url(../images/cover_webprism.jpg) no-repeat center center;
   -moz-background-size: cover;
@@ -253,36 +269,44 @@ section .row hr {
   background-size: cover;
   color: white;
 }
-/* line 174, ../sass/_onepage.scss */
+/* line 182, ../sass/_onepage.scss */
 #start .row {
   height: 31.25rem;
 }
 
-/* line 179, ../sass/_onepage.scss */
+/* line 187, ../sass/_onepage.scss */
 #work {
   color: rgba(0, 0, 0, 0.5);
 }
-/* line 182, ../sass/_onepage.scss */
+/* line 189, ../sass/_onepage.scss */
+#work .work-lead {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  max-width: 700px;
+  margin: 2rem auto 4rem;
+  text-align: center;
+}
+/* line 197, ../sass/_onepage.scss */
 #work img.center {
   display: block;
   max-width: 600px;
   margin: 0 auto 1rem auto;
 }
 @media (max-width: 479px) {
-  /* line 181, ../sass/_onepage.scss */
+  /* line 196, ../sass/_onepage.scss */
   #work img {
     margin-bottom: 1rem;
   }
 }
 @media (min-width: 480px) {
-  /* line 191, ../sass/_onepage.scss */
+  /* line 206, ../sass/_onepage.scss */
   #work img.right {
     width: 55%;
     padding: 0 1rem 0 0;
     float: left;
     transform: perspective(700px) rotateY(25deg) translateX(15px);
   }
-  /* line 197, ../sass/_onepage.scss */
+  /* line 212, ../sass/_onepage.scss */
   #work img.left {
     width: 55%;
     float: right;
@@ -291,7 +315,7 @@ section .row hr {
   }
 }
 
-/* line 207, ../sass/_onepage.scss */
+/* line 222, ../sass/_onepage.scss */
 .sample {
   background: url(../images/sample-lg.jpg) no-repeat center center;
   -moz-background-size: cover;
@@ -301,32 +325,32 @@ section .row hr {
 }
 
 @media (min-width: 480px) {
-  /* line 214, ../sass/_onepage.scss */
+  /* line 229, ../sass/_onepage.scss */
   .work-blurb.right {
     width: 45%;
     padding: 0 0 0 1rem;
     float: left;
   }
-  /* line 219, ../sass/_onepage.scss */
+  /* line 234, ../sass/_onepage.scss */
   .work-blurb.left {
     width: 45%;
     float: right;
     padding: 0 1rem 0 0;
   }
 }
-/* line 225, ../sass/_onepage.scss */
+/* line 240, ../sass/_onepage.scss */
 .work-blurb h2 {
   font-family: "Gentium Basic", serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-/* line 231, ../sass/_onepage.scss */
+/* line 246, ../sass/_onepage.scss */
 .work-blurb p {
   line-height: 1.4;
 }
 
-/* line 236, ../sass/_onepage.scss */
+/* line 251, ../sass/_onepage.scss */
 .sample-caption {
   max-width: 600px;
   margin: 1rem auto 6rem auto;
@@ -335,22 +359,22 @@ section .row hr {
   text-align: center;
 }
 
-/* line 244, ../sass/_onepage.scss */
+/* line 259, ../sass/_onepage.scss */
 .pipe {
   font-size: .8rem;
   position: relative;
   top: -1px;
 }
 
-/* line 250, ../sass/_onepage.scss */
+/* line 265, ../sass/_onepage.scss */
 #contact {
-  color: whitesmoke;
+  color: rgba(0, 0, 0, 0.5);
 }
-/* line 251, ../sass/_onepage.scss */
+/* line 266, ../sass/_onepage.scss */
 #contact .row {
   padding-top: 0;
 }
-/* line 255, ../sass/_onepage.scss */
+/* line 270, ../sass/_onepage.scss */
 #contact h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -358,7 +382,7 @@ section .row hr {
   text-transform: uppercase;
   text-align: center;
 }
-/* line 262, ../sass/_onepage.scss */
+/* line 277, ../sass/_onepage.scss */
 #contact input[type="text"],
 #contact textarea {
   display: block;
@@ -367,11 +391,11 @@ section .row hr {
   margin: 1rem auto;
   padding: .5rem;
 }
-/* line 270, ../sass/_onepage.scss */
+/* line 285, ../sass/_onepage.scss */
 #contact textarea {
   height: 6rem;
 }
-/* line 273, ../sass/_onepage.scss */
+/* line 288, ../sass/_onepage.scss */
 #contact input[type="submit"] {
   background-color: cornflowerblue;
   color: white;
