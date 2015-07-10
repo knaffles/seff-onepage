@@ -31,11 +31,6 @@ $(window).on('scroll', function() {
   }
 })
 
-// Lazy load
-$("img.lazy").lazyload({
-  effect : "fadeIn"
-});
-
 // Magnific
 $('.image-popup-no-margins').magnificPopup({
   type: 'image',
