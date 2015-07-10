@@ -21,6 +21,21 @@ $('#main-nav a').click(function(e){
   e.preventDefault();
 });
 
+// Show the title after scrolling past the first section.
+var startHeight = $('#start').outerHeight();
+$(window).on('scroll', function() {
+  if ($('body').scrollTop() > startHeight) {
+    $('header').addClass('show-title');
+  } else {
+    $('header').removeClass('show-title');
+  }
+})
+
+// Lazy load
+$("img.lazy").lazyload({
+  effect : "fadeIn"
+});
+
 // Magnific
 $('.image-popup-no-margins').magnificPopup({
   type: 'image',

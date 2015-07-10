@@ -2,7 +2,6 @@
 
 .wufoo {
   font-family: 'Roboto', sans-serif;
-  background-color: #222;
   color: whitesmoke;
   -webkit-font-smoothing: antialiased;
   * {
@@ -14,15 +13,14 @@
     padding: 0;
   }
   .info h2 {
-    color: whitesmoke;
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 2px;
     text-align: center;
   }
   label.desc {
-    color: whitesmoke;
+    color: rgba(0, 0, 0, 0.5);
     display: block;
     width: 100%;
     max-width: 300px;
@@ -32,6 +30,7 @@
   input[type="email"],
   textarea,
   textarea.textarea {
+    border: 1px solid #7c7c7c;
     display: block;
     width: 100%;
     max-width: 300px;
@@ -43,7 +42,7 @@
     height: 6rem;
   }
   input[type="submit"] {
-    background-color: cornflowerblue;
+    background-color: #415f93;
     color: white;
     font-size: 1rem;
     font-weight: 700;

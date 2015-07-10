@@ -64,24 +64,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 10, ../sass/_onepage.scss */
+/* line 15, ../sass/_onepage.scss */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 14, ../sass/_onepage.scss */
+/* line 19, ../sass/_onepage.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 23, ../sass/_onepage.scss */
 html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 18, ../sass/_onepage.scss */
+/* line 27, ../sass/_onepage.scss */
 body {
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
 }
 
-/* line 22, ../sass/_onepage.scss */
+/* line 31, ../sass/_onepage.scss */
 img {
   display: inline-block;
   vertical-align: middle;
@@ -90,47 +95,67 @@ img {
   height: auto;
 }
 
-/* line 30, ../sass/_onepage.scss */
+/* line 39, ../sass/_onepage.scss */
 header {
   background-color: black;
+  opacity: 0.9;
   position: fixed;
   top: 0;
   height: 5rem;
+  overflow: hidden;
   width: 100%;
   z-index: 10;
 }
-/* line 37, ../sass/_onepage.scss */
+/* line 48, ../sass/_onepage.scss */
 header .row {
   height: 100%;
-}
-/* line 40, ../sass/_onepage.scss */
-header h1 {
-  font-size: 1.5rem;
-  float: left;
   position: relative;
-  top: 50%;
+}
+/* line 53, ../sass/_onepage.scss */
+header.show-title .header-title {
   transform: translateY(-50%);
 }
 
-/* line 49, ../sass/_onepage.scss */
+/* line 59, ../sass/_onepage.scss */
+.header-title {
+  color: #cccccc;
+  font-family: "Gentium Basic", serif;
+  font-size: 2.5rem;
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(150%);
+  transition: transform 200ms ease-in;
+}
+@media (max-width: 360px) {
+  /* line 59, ../sass/_onepage.scss */
+  .header-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 479px) {
+  /* line 72, ../sass/_onepage.scss */
+  .header-title span {
+    display: none;
+  }
+}
+
+/* line 79, ../sass/_onepage.scss */
 .hero-container {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 55, ../sass/_onepage.scss */
+/* line 85, ../sass/_onepage.scss */
 .hero {
-  font-family: 'Gentium Basic', sans-serif;
+  font-family: "Gentium Basic", serif;
   font-size: 3.25rem;
-  font-weight: bold;
-  letter-spacing: 5px;
   text-align: center;
-  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
-/* line 65, ../sass/_onepage.scss */
+/* line 92, ../sass/_onepage.scss */
 .subhero {
   text-transform: uppercase;
   font-size: 2rem;
@@ -138,20 +163,13 @@ header h1 {
   text-align: center;
 }
 
-/* line 72, ../sass/_onepage.scss */
+/* line 99, ../sass/_onepage.scss */
 #main-nav {
   float: right;
   height: 5rem;
   text-transform: uppercase;
 }
-@media (max-width: 479px) {
-  /* line 72, ../sass/_onepage.scss */
-  #main-nav {
-    float: none;
-    text-align: center;
-  }
-}
-/* line 80, ../sass/_onepage.scss */
+/* line 107, ../sass/_onepage.scss */
 #main-nav li {
   float: left;
   height: 100%;
@@ -159,16 +177,9 @@ header h1 {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-@media (max-width: 479px) {
-  /* line 80, ../sass/_onepage.scss */
-  #main-nav li {
-    display: inline-block;
-    float: none;
-  }
-}
-/* line 90, ../sass/_onepage.scss */
+/* line 117, ../sass/_onepage.scss */
 #main-nav li a {
-  color: white;
+  color: #cccccc;
   text-decoration: none;
   display: block;
   padding: 2rem;
@@ -179,25 +190,32 @@ header h1 {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-@media (max-width: 479px) {
-  /* line 90, ../sass/_onepage.scss */
+@media (max-width: 360px) {
+  /* line 117, ../sass/_onepage.scss */
   #main-nav li a {
-    padding: 1rem;
+    padding: .5rem;
+    font-size: .9rem;
+  }
+}
+@media (max-width: 479px) {
+  /* line 117, ../sass/_onepage.scss */
+  #main-nav li a {
+    padding: .75rem;
   }
 }
 @media (min-width: 480px) {
-  /* line 104, ../sass/_onepage.scss */
+  /* line 135, ../sass/_onepage.scss */
   #main-nav li:last-child a {
     padding-right: 0;
   }
 }
 
-/* line 112, ../sass/_onepage.scss */
+/* line 143, ../sass/_onepage.scss */
 main {
   margin-top: 5rem;
 }
 
-/* line 116, ../sass/_onepage.scss */
+/* line 147, ../sass/_onepage.scss */
 .row {
   max-width: 1000px;
   margin: 0 auto;
@@ -207,17 +225,17 @@ main {
   box-sizing: border-box;
 }
 
-/* line 123, ../sass/_onepage.scss */
+/* line 154, ../sass/_onepage.scss */
 section {
   clear: both;
 }
 
-/* line 127, ../sass/_onepage.scss */
+/* line 158, ../sass/_onepage.scss */
 section .row {
   min-height: 500px;
   padding: 5rem 1.25rem;
 }
-/* line 130, ../sass/_onepage.scss */
+/* line 161, ../sass/_onepage.scss */
 section .row hr {
   clear: both;
   border: none;
@@ -226,41 +244,45 @@ section .row hr {
   margin: 0 0 5rem;
 }
 
-/* line 139, ../sass/_onepage.scss */
+/* line 170, ../sass/_onepage.scss */
 #start {
-  background-color: #222;
+  background: url(../images/cover_webprism.jpg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
   color: white;
 }
-/* line 142, ../sass/_onepage.scss */
+/* line 174, ../sass/_onepage.scss */
 #start .row {
   height: 31.25rem;
 }
 
-/* line 147, ../sass/_onepage.scss */
+/* line 179, ../sass/_onepage.scss */
 #work {
-  color: #566364;
+  color: rgba(0, 0, 0, 0.5);
 }
-/* line 150, ../sass/_onepage.scss */
+/* line 182, ../sass/_onepage.scss */
 #work img.center {
   display: block;
   max-width: 600px;
   margin: 0 auto 1rem auto;
 }
 @media (max-width: 479px) {
-  /* line 149, ../sass/_onepage.scss */
+  /* line 181, ../sass/_onepage.scss */
   #work img {
     margin-bottom: 1rem;
   }
 }
 @media (min-width: 480px) {
-  /* line 159, ../sass/_onepage.scss */
+  /* line 191, ../sass/_onepage.scss */
   #work img.right {
     width: 55%;
     padding: 0 1rem 0 0;
     float: left;
     transform: perspective(700px) rotateY(25deg) translateX(15px);
   }
-  /* line 165, ../sass/_onepage.scss */
+  /* line 197, ../sass/_onepage.scss */
   #work img.left {
     width: 55%;
     float: right;
@@ -269,38 +291,66 @@ section .row hr {
   }
 }
 
+/* line 207, ../sass/_onepage.scss */
+.sample {
+  background: url(../images/sample-lg.jpg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
 @media (min-width: 480px) {
-  /* line 177, ../sass/_onepage.scss */
+  /* line 214, ../sass/_onepage.scss */
   .work-blurb.right {
     width: 45%;
     padding: 0 0 0 1rem;
     float: left;
   }
-  /* line 182, ../sass/_onepage.scss */
+  /* line 219, ../sass/_onepage.scss */
   .work-blurb.left {
     width: 45%;
     float: right;
     padding: 0 1rem 0 0;
   }
 }
-/* line 188, ../sass/_onepage.scss */
+/* line 225, ../sass/_onepage.scss */
 .work-blurb h2 {
-  font-family: 'Gentium Basic', sans-serif;
+  font-family: "Gentium Basic", serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-/* line 194, ../sass/_onepage.scss */
+/* line 231, ../sass/_onepage.scss */
 .work-blurb p {
   line-height: 1.4;
 }
 
-/* line 199, ../sass/_onepage.scss */
+/* line 236, ../sass/_onepage.scss */
+.sample-caption {
+  max-width: 600px;
+  margin: 1rem auto 6rem auto;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* line 244, ../sass/_onepage.scss */
+.pipe {
+  font-size: .8rem;
+  position: relative;
+  top: -1px;
+}
+
+/* line 250, ../sass/_onepage.scss */
 #contact {
-  background-color: #222;
   color: whitesmoke;
 }
-/* line 202, ../sass/_onepage.scss */
+/* line 251, ../sass/_onepage.scss */
+#contact .row {
+  padding-top: 0;
+}
+/* line 255, ../sass/_onepage.scss */
 #contact h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -308,7 +358,7 @@ section .row hr {
   text-transform: uppercase;
   text-align: center;
 }
-/* line 209, ../sass/_onepage.scss */
+/* line 262, ../sass/_onepage.scss */
 #contact input[type="text"],
 #contact textarea {
   display: block;
@@ -317,17 +367,17 @@ section .row hr {
   margin: 1rem auto;
   padding: .5rem;
 }
-/* line 217, ../sass/_onepage.scss */
+/* line 270, ../sass/_onepage.scss */
 #contact textarea {
   height: 6rem;
 }
-/* line 220, ../sass/_onepage.scss */
+/* line 273, ../sass/_onepage.scss */
 #contact input[type="submit"] {
   background-color: cornflowerblue;
   color: white;
   font-size: 1rem;
   font-weight: 700;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-transform: uppercase;
   display: block;
   border: none;

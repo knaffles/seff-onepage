@@ -7,8 +7,17 @@ $micro-only: max-width ($micro - 1);
 $small: 480px;
 $small-only: max-width ($small - 1);
 
+$serif: 'Gentium Basic', serif;
+$sans-serif: 'Cabin', sans-serif;
+
+$whiteish: darken(#fff, 20%);
+
 * {
   @include box-sizing(border-box);
+}
+
+strong {
+  font-weight: bold;
 }
 
 html {
@@ -16,7 +25,7 @@ html {
 }
 
 body {
-  font-family: 'Cabin', sans-serif;
+  font-family: $sans-serif;
 }
 
 img {
@@ -29,20 +38,41 @@ img {
 
 header {
   background-color: black;
+  opacity: 0.9;
   position: fixed;
   top: 0;
   height: $nav-height;
+  overflow: hidden;
   width: 100%;
   z-index: 10;
   .row {
     height: 100%;
-  }
-  h1 {
-    font-size: 1.5rem;
-    float: left;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  }
+  &.show-title {
+    .header-title {
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.header-title {
+  color: $whiteish;
+  font-family: $serif;
+  font-size: 2.5rem;
+  @include breakpoint(max-width 360px) {
+    font-size: 2rem;
+  }
+  // text-transform: uppercase;
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(150%);
+  transition: transform 200ms ease-in;
+  span {
+    @include breakpoint($small-only) {
+      display: none;
+    }
   }
 }
 
@@ -53,12 +83,9 @@ header {
 }
 
 .hero {
-  font-family: 'Gentium Basic', sans-serif;
+  font-family: $serif;
   font-size: 3.25rem;
-  font-weight: bold;
-  letter-spacing: 5px;
   text-align: center;
-  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
@@ -70,29 +97,33 @@ header {
 }
 
 #main-nav {
-  @include breakpoint($small-only) {
-    float: none;
-    text-align: center;
-  }
+  // @include breakpoint($small-only) {
+  //   float: none;
+  //   text-align: center;
+  // }
   float: right;
   height: $nav-height;
   text-transform: uppercase;
   li {
-    @include breakpoint($small-only) {
-      display: inline-block;
-      float: none;
-    }
+    // @include breakpoint($small-only) {
+    //   display: inline-block;
+    //   float: none;
+    // }
     float: left;
     height: 100%;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     a {
-      color: white;
+      color: $whiteish;
       text-decoration: none;
       display: block;
+      @include breakpoint(max-width 360px) {
+        padding: .5rem;
+        font-size: .9rem;
+      }
       @include breakpoint($small-only) {
-        padding: 1rem;
+        padding: .75rem;
       }
       padding: 2rem;
       position: relative;
@@ -137,7 +168,8 @@ section .row {
 }
 
 #start {
-  background-color: #222;
+  background: url(../images/cover_webprism.jpg) no-repeat center center;
+  @include background-size(cover);
   color: white;
   .row {
     height: 31.25rem;
@@ -145,7 +177,7 @@ section .row {
 }
 
 #work {
-  color: #566364;
+  color: rgba(0, 0, 0, 0.5);
   img {
     &.center {
       display: block;
@@ -172,6 +204,11 @@ section .row {
   }
 }
 
+.sample {
+  background: url(../images/sample-lg.jpg) no-repeat center center;
+  @include background-size(cover);
+}
+
 .work-blurb {
   @include breakpoint($small) {
     &.right {
@@ -186,7 +223,7 @@ section .row {
     }
   }
   h2 {
-    font-family: 'Gentium Basic', sans-serif;
+    font-family: $serif;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -196,8 +233,24 @@ section .row {
   }
 }
 
+.sample-caption {
+  max-width: 600px;
+  margin: 1rem auto 6rem auto;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.pipe {
+  font-size: .8rem;
+  position: relative;
+  top: -1px; 
+}
+
 #contact {
-  background-color: #222;
+  .row {
+    padding-top: 0;
+  }
   color: whitesmoke;
   h2 {
     font-size: 3rem;
@@ -222,7 +275,7 @@ section .row {
     color: white;
     font-size: 1rem;
     font-weight: 700;
-    font-family: 'Cabin', sans-serif;
+    font-family: $sans-serif;
     text-transform: uppercase;
     display: block;
     border: none;

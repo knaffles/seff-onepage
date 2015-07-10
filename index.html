@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="favicon.ico" />
   <link href='http://fonts.googleapis.com/css?family=Cabin|Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
   <link href="css/styles.css" rel="stylesheet" type="text/css" />
   <!--[if lte IE 9]>
@@ -10,6 +13,7 @@
 
   <header>
     <div class="row">
+      <div class="header-title"><span>Betsy </span>Seff</div>
       <nav role="navigation">
         <ul id="main-nav">
           <li><a href="#">Home</a></li>
@@ -31,45 +35,33 @@
     </section>
 
     <section id="work">
-      <div class="row">
+      <div class="row" class="sample">
 
-        <!-- <a class="image-popup-no-margins" href="images/sw1.jpg" title="Caption. Can be aligned to any side and contain any HTML."> -->
-          <img src="images/sample1.jpg" alt="Sample Work" class="center" />
-        <!-- </a> -->
+          <img data-original="images/sample-ladders.jpg" class="lazy" alt="Ladders sample" title="Ladders sample" />
+          <p class="sample-caption">client <span class="pipe">|</span> National Geographic Learning/Cengage Learning</p>
 
-        <!-- <img src="images/sw1.jpg" alt="Star Wars" title="Star Wars" /> -->
-        <div class="work-blurb">
-          <h2>National Geographic</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae odit itaque doloribus provident autem distinctio optio ex cum alias officia, quibusdam repellat natus in, at libero excepturi magnam rem debitis?</p>
-        </div>
-        
-        <hr />
-        
-        <img src="images/sw1.jpg" alt="Star Wars" title="Star Wars" class="left" />
-        <div class="work-blurb left">
-          <h2>National Geographic</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae odit itaque doloribus provident autem distinctio optio ex cum alias officia, quibusdam repellat natus in, at libero excepturi magnam rem debitis?</p>
-        </div>
+          <img data-original="images/sample-covers.jpg" class="lazy" alt="Ladder covers sample" title="Ladder covers sample" />
+          <p class="sample-caption">client <span class="pipe">|</span> National Geographic Learning/Cengage Learning</p>
+
+          <img data-original="images/sample-bookmobile.jpg" class="lazy" alt="Bookmobile sample" title="Bookmobile sample" />
+          <p class="sample-caption">client <span class="pipe">|</span> Arlington Heights Memorial Library</p>
+
+          <img data-original="images/sample-memima.jpg" class="lazy" alt="me plus mi sample" title="me plus mi sample" />
+          <p class="sample-caption">client <span class="pipe">|</span> me + mi publishing</p>
+
       </div>
     </section>
 
     <section id="contact">
       <div class="row">
         <iframe height="497" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="http://betsyseff.wufoo.com/embed/zga09gd19ublb2/"></iframe>
-
-<!--         <h2>Talk To Me</h2>
-        <form action="#">
-          <input type="text" placeholder="Email address" />
-          <input type="text" placeholder="Name" />
-          <textarea placeholder="Comments"></textarea>
-          <input type="submit" value="Contact" />
-        </form> -->
       </div>
     </section>
   </main>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.lazyload.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
