@@ -61,7 +61,7 @@ header {
   }
   &.show-title {
     .header-title {
-      transform: translateY(-50%);
+      @include transform(translateY(-50%));
     }
   }
 }
@@ -77,8 +77,8 @@ header {
   position: absolute;
   left: 1.25rem;
   top: 50%;
-  transform: translateY(150%);
-  transition: transform 200ms ease-in;
+  @include transform(translateY(150%));
+  @include single-transition(transform, 200ms, ease-in);
   span {
     @include breakpoint($small-only) {
       display: none;
@@ -89,7 +89,7 @@ header {
 .hero-container {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  @include transform(translateY(-50%));
 }
 
 .hero {
@@ -181,6 +181,7 @@ section .row {
   color: white;
   .row {
     height: 31.25rem;
+    padding: 0;
   }
 }
 
