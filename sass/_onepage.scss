@@ -120,12 +120,15 @@ header {
       color: $whiteish;
       text-decoration: none;
       display: block;
-      @include breakpoint(max-width 360px) {
-        padding: .5rem;
-        font-size: .9rem;
+      @include breakpoint(max-width 550px) {
+        padding: 1rem;
       }
       @include breakpoint($small-only) {
         padding: .75rem;
+      }
+      @include breakpoint(max-width 360px) {
+        padding: .5rem;
+        font-size: .9rem;
       }
       padding: 2rem;
       position: relative;
