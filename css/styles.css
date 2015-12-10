@@ -290,14 +290,15 @@ section .row hr {
 /* line 185, ../sass/_onepage.scss */
 #start .row {
   height: 31.25rem;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-/* line 191, ../sass/_onepage.scss */
+/* line 192, ../sass/_onepage.scss */
 #work {
   color: rgba(0, 0, 0, 0.5);
 }
-/* line 193, ../sass/_onepage.scss */
+/* line 194, ../sass/_onepage.scss */
 #work .work-lead {
   font-size: 1.5rem;
   line-height: 1.3;
@@ -305,27 +306,27 @@ section .row hr {
   margin: 2rem auto 4rem;
   text-align: center;
 }
-/* line 201, ../sass/_onepage.scss */
+/* line 202, ../sass/_onepage.scss */
 #work img.center {
   display: block;
   max-width: 600px;
   margin: 0 auto 1rem auto;
 }
 @media (max-width: 479px) {
-  /* line 200, ../sass/_onepage.scss */
+  /* line 201, ../sass/_onepage.scss */
   #work img {
     margin-bottom: 1rem;
   }
 }
 @media (min-width: 480px) {
-  /* line 210, ../sass/_onepage.scss */
+  /* line 211, ../sass/_onepage.scss */
   #work img.right {
     width: 55%;
     padding: 0 1rem 0 0;
     float: left;
     transform: perspective(700px) rotateY(25deg) translateX(15px);
   }
-  /* line 216, ../sass/_onepage.scss */
+  /* line 217, ../sass/_onepage.scss */
   #work img.left {
     width: 55%;
     float: right;
@@ -334,7 +335,7 @@ section .row hr {
   }
 }
 
-/* line 226, ../sass/_onepage.scss */
+/* line 227, ../sass/_onepage.scss */
 .sample {
   background: url(../images/sample-lg.jpg) no-repeat center center;
   -moz-background-size: cover;
@@ -344,32 +345,32 @@ section .row hr {
 }
 
 @media (min-width: 480px) {
-  /* line 233, ../sass/_onepage.scss */
+  /* line 234, ../sass/_onepage.scss */
   .work-blurb.right {
     width: 45%;
     padding: 0 0 0 1rem;
     float: left;
   }
-  /* line 238, ../sass/_onepage.scss */
+  /* line 239, ../sass/_onepage.scss */
   .work-blurb.left {
     width: 45%;
     float: right;
     padding: 0 1rem 0 0;
   }
 }
-/* line 244, ../sass/_onepage.scss */
+/* line 245, ../sass/_onepage.scss */
 .work-blurb h2 {
   font-family: "Gentium Basic", serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-/* line 250, ../sass/_onepage.scss */
+/* line 251, ../sass/_onepage.scss */
 .work-blurb p {
   line-height: 1.4;
 }
 
-/* line 255, ../sass/_onepage.scss */
+/* line 256, ../sass/_onepage.scss */
 .sample-caption {
   max-width: 600px;
   margin: 1rem auto 6rem auto;
@@ -378,22 +379,22 @@ section .row hr {
   text-align: center;
 }
 
-/* line 263, ../sass/_onepage.scss */
+/* line 264, ../sass/_onepage.scss */
 .pipe {
   font-size: .8rem;
   position: relative;
   top: -1px;
 }
 
-/* line 269, ../sass/_onepage.scss */
+/* line 270, ../sass/_onepage.scss */
 #contact {
   color: rgba(0, 0, 0, 0.5);
 }
-/* line 270, ../sass/_onepage.scss */
+/* line 271, ../sass/_onepage.scss */
 #contact .row {
   padding-top: 0;
 }
-/* line 274, ../sass/_onepage.scss */
+/* line 275, ../sass/_onepage.scss */
 #contact h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -401,7 +402,7 @@ section .row hr {
   text-transform: uppercase;
   text-align: center;
 }
-/* line 281, ../sass/_onepage.scss */
+/* line 282, ../sass/_onepage.scss */
 #contact input[type="text"],
 #contact textarea {
   display: block;
@@ -410,11 +411,11 @@ section .row hr {
   margin: 1rem auto;
   padding: .5rem;
 }
-/* line 289, ../sass/_onepage.scss */
+/* line 290, ../sass/_onepage.scss */
 #contact textarea {
   height: 6rem;
 }
-/* line 292, ../sass/_onepage.scss */
+/* line 293, ../sass/_onepage.scss */
 #contact input[type="submit"] {
   background-color: cornflowerblue;
   color: white;
@@ -429,7 +430,7 @@ section .row hr {
   padding: .5rem 1.5rem;
   margin: 0 auto;
 }
-/* line 306, ../sass/_onepage.scss */
+/* line 307, ../sass/_onepage.scss */
 #contact iframe {
   height: 650px;
 }
