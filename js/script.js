@@ -24,7 +24,7 @@ $('#main-nav a, .scroll').click(function(e){
 // Show the title after scrolling past the first section.
 var startHeight = $('#start').outerHeight();
 $(window).on('scroll', function() {
-  if ($('body').scrollTop() > startHeight) {
+  if ($(document).scrollTop() > startHeight) {
     $('header').addClass('show-title');
   } else {
     $('header').removeClass('show-title');
